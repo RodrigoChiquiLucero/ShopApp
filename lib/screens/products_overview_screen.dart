@@ -19,6 +19,7 @@ class ProductsOverViewScreen extends StatefulWidget {
 
 class _ProductsOverViewScreenState extends State<ProductsOverViewScreen> {
   var _showOnlyFavorites = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +48,7 @@ class _ProductsOverViewScreenState extends State<ProductsOverViewScreen> {
             Consumer<Cart>(
               builder: (_, cart, ch) => Badge(
                 child: ch,
-                value: cart.items.length.toString(),
+                value: cart.itemCount.toString(),
               ),
               child: IconButton(
                   icon: Icon(Icons.shopping_cart),
